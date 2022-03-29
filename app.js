@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 //create a new database in mongodb at the link where it is hosted
 // avoid that deprecation warning
-mongoose.connect("mongodb+srv://admin-tenzin:todo123$@cluster0.fsorq.mongodb.net/todosDB", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://admin-tenzin:#@cluster0.fsorq.mongodb.net/todosDB", {useNewUrlParser:true});
 
 //create the schema - blueprint for the document in mongodb database
 const todoSchema = {
