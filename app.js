@@ -146,8 +146,13 @@ app.get('/:customRouteName',function(req,res){
 app.get('/about',function(req,res){
   res.render('about')
 });
-//dynamic port from Heroku
 
-app.listen(process.env.PORT || port,function(){
+//port that heroku has set up
+let port = process.env.PORT;
+if (port == null || port == ""){
+  port = 3000;
+};
+
+app.listen(port,function(){
   console.log("server is running on " + port)
 })
