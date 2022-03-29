@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 3005;
 const mongoose = require('mongoose');
 const _ = require('lodash')
 
@@ -148,7 +147,7 @@ app.get('/about',function(req,res){
 });
 
 //port that heroku has set up
-let port = process.env.PORT;
+const port = process.env.PORT;
 if (port == null || port == ""){
   port = 3000;
 };
